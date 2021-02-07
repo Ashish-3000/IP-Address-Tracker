@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | IP Address Tracker</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+    <!-- leaflet -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <!-- mapbox -->
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="upper-part">
+      <h1>IP Address Tracker</h1>
+      <input
+        id="ipAddress"
+        type="text"
+        placeholder="Search for any IP address or domain"
+        
+      />
+
+      <span id="onClick">
+        <svg
+          class="icon"
+          xmlns="http://www.w3.org/2000/svg"
+          width="11"
+          height="14"
+        >
+          <path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6" />
+        </svg>
+      </span>
+      <div class="invisible" id="invisible">
+        Enter a valid ip Address or Domain
+      </div>
+    </div>
+
+    <div class="second-item-parent">
+      <div class="second-item" id="second-item">
+        <div>
+          <h5>IP Address</h5>
+          <h1 id="ipaddressbox"></h1>
+        </div>
+        <div>
+          <h5>Location</h5>
+          <h1 id="location"></h1>
+        </div>
+        <div>
+          <h5>Timezone</h5>
+          <h1 id="timezone"></h1>
+        </div>
+        <div>
+          <h5>ISP</h5>
+          <h1 id="isp"></h1>
+        </div>
+      </div>
+      <div id="map"></div>
+    </div>
+    <script type='text/javascript' src='./config.js'></script>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
